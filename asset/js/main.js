@@ -47,6 +47,8 @@ function handleTurn() {
 };
 
 function init() {
+    turn = 'X'
+    win = '';
     board = [
     '', '', '',
     '', '', '',
@@ -54,13 +56,35 @@ function init() {
     ];
     render();
 };
-
+//Initialisation des variable utiliser dans mon code
+localStorage.setItem('pointsX', "0");
+localStorage.setItem("pointsO", "0");
+const renduDesPoint = document.getElementById("affichageDesPoints");
+let localStoragePourX = localStorage.getItem('pointsX');
+let localStoragePourO = localStorage.getItem('pointsO');
 function render() {
     board.forEach(function(mark, index) {
     //this moves the value of the board item into the squares[idx]
     squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `C'est un égalité!` : win ? `${win} gagne la partie!` : `C'est au tours des ${turn}!`;s
-    };
+    messages.textContent = win === 'T' ? `C'est un égalité!` : win ? `${win} gagne la partie!` : `C'est au tours des ${turn}!`;
+    
+    // ajout des point dans le stokage locale
+    if(win == 'X'){
+        localStoragePourX = localStorage.getItem('pointsX');
+        localStoragePourX =Number(localStoragePourX) + 1;
+        localStorage.setItem("pointsX", localStoragePourX);
 
+    }
+    else if(win == 'O'){
+        localStoragePourO = localStorage.getItem('pointsO');
+        localStoragePourO = Number(localStoragePourO)+1;
+        localStorage.setItem("pointsO", localStoragePourO);
+        
+    }
+    let messagePourlesPoints = localStoragePourX +" pour les x contre  " + localStoragePourO + " pour les O";
+    renduDesPoint.innerHTML = messagePourlesPoints;
+};
+
+    
 init();

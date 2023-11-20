@@ -1,8 +1,16 @@
-body {
+@font-face {
+    font-family: "SemiBold600"; 
+    src: url("../Font/Caveat-VariableFont_wght.ttf"); 
+}
+#tictactoe {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    }
-    
+}
+
+.square{
+    text-align: center;
+    font-family: SemiBold600, Helvetica, sans-serif;
+}    
     
 h2 {
     margin: 0 auto;
@@ -51,6 +59,20 @@ h2 {
     font-size: 20px;
     border: 1px solid black;
     height: 55px;
-    width: 100px;
+    width: 150px;
     margin: 10px;
+}
+
+footer{
+    background-color:rgb(111, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    
+}
+
+#moi{
+    width: 145px;
+    border-radius: 50%;
 }
