@@ -58,10 +58,15 @@ function init() {
 };
 //Initialisation des variable utiliser dans mon code
 localStorage.setItem('pointsX', "0");
+
 localStorage.setItem("pointsO", "0");
+
 const renduDesPoint = document.getElementById("affichageDesPoints");
+
 let localStoragePourX = localStorage.getItem('pointsX');
+
 let localStoragePourO = localStorage.getItem('pointsO');
+
 function render() {
     board.forEach(function(mark, index) {
     //this moves the value of the board item into the squares[idx]
