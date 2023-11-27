@@ -64,7 +64,7 @@ function render() {
     squares[index].textContent = mark;
     });
     messages.textContent = win === 'T' ? `C'est un égalité!` : win ? `${win} gagne la partie!` : `C'est au tours des ${turn}!`;
-    renduDesPointDeLaPartie(win)
+    renduDesPointDeLaPartie(win);
 };
 //Initialisation des variable utiliser dans mon code
 localStorage.setItem('pointsX', "0");
