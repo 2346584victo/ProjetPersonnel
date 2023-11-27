@@ -40,6 +40,7 @@ function handleTurn() {
     let idx = squares.findIndex(function(square) {
         return square === event.target;
     });
+
     board[idx] = turn;
     turn = turn === 'X' ? 'O' : 'X';
     win = getWinner();
@@ -87,6 +88,7 @@ function render() {
         localStorage.setItem("pointsO", localStoragePourO);
         
     }
+    // message pour montrer les points
     let messagePourlesPoints = localStoragePourX +" pour les x contre  " + localStoragePourO + " pour les O";
     renduDesPoint.innerHTML = messagePourlesPoints;
 };
