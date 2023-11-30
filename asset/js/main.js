@@ -76,7 +76,11 @@ const renduDesPoint = document.getElementById("affichageDesPoints");
 let localStoragePourX = localStorage.getItem('pointsX');
 
 let localStoragePourO = localStorage.getItem('pointsO');
-// Augmente les points du gagnant.
+
+/**
+ *  Augmente les points du gagnant.
+ * @param {string} win contient la lettre du gagnant
+ */
 function renduDesPointDeLaPartie(win){
     // ajout des point dans le stokage locale
     if(win == 'X'){
@@ -96,5 +100,5 @@ function renduDesPointDeLaPartie(win){
     renduDesPoint.innerHTML = messagePourlesPoints;
 };
 
-    
+ renduDesPointDeLaPartie()   
 init();
