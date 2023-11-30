@@ -76,6 +76,7 @@ const renduDesPoint = document.getElementById("affichageDesPoints");
 let localStoragePourX = localStorage.getItem('pointsX');
 
 let localStoragePourO = localStorage.getItem('pointsO');
+// Augmente les points du gagnant.
 function renduDesPointDeLaPartie(win){
     // ajout des point dans le stokage locale
     if(win == 'X'){
