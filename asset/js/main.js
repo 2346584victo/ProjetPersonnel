@@ -100,5 +100,4 @@ function renduDesPointDeLaPartie(win){
     renduDesPoint.innerHTML = messagePourlesPoints;
 };
 
- renduDesPointDeLaPartie()   
 init();
